@@ -1,8 +1,9 @@
 var katzDeli = [];
+var number = []
 
-function takeANumber (katzDeliLine, name) {
-  katzDeliLine.push(name);
-  return (`Welcome, ${name}. You are number ${katzDeliLine.length} in line.`)
+function takeANumber (katzDeliLine, number) {
+  katzDeliLine.push(number);
+  return (`You are number ${number} in line.`)
 }
 
 
@@ -17,13 +18,13 @@ return (`Currently serving ${firstPersonInLine}.`)
 
 
 function currentLine (katzDeliLine) {
-  var line = []
+  var currentLine = []
   for (let i = 0; i < katzDeliLine.length; i++) {
-   line.push(` ${i + 1}. ${katzDeliLine[i]}`)
+   currentLine.push(` ${i + 1}. ${katzDeliLine[i]}`)
   }
 if (katzDeliLine.length === 0) {
   return ("The line is currently empty.")
 } else {
-  return (`The line is currently:${line}`)
+  return (`The line is currently:${currentLine}`)
 }
 }
